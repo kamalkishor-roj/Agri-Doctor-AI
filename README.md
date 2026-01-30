@@ -46,14 +46,12 @@ The model was trained on a curated dataset combining the **Plant Village Dataset
 * A free [Groq API Key](https://console.groq.com/keys)
 
 ### 1. Clone the Repository
-```bash
-git clone [https://github.com/your-username/Agri-Doctor.git](https://github.com/your-username/Agri-Doctor.git)
-cd Agri-Doctor
 
 ###2. Install Dependencies
 Bash
 pip install -r requirements.txt
-3. Set Up API Key (Securely)
+
+###3. Set Up API Key (Securely)
 Create a .streamlit folder and a secrets.toml file to store your key safely.
 
 Windows:
@@ -65,10 +63,12 @@ Inside secrets.toml, paste your key:
 
 Ini, TOML
 GROQ_API_KEY = "gsk_your_key_here"
-4. Run the App
+
+###4. Run the App
 Bash
 python -m streamlit run app.py
-📂 Project Structure
+
+###📂 Project Structure
 Plaintext
 Agri-Doctor/
 ├── MultiCrop_Doctor_v1.keras    # The trained AI Brain (CNN)
@@ -77,15 +77,16 @@ Agri-Doctor/
 ├── README.md                    # Project Documentation
 └── .streamlit/                  # Hidden folder for secrets
     └── secrets.toml             # API Key storage (Do not upload to GitHub)
-🔮 Future Scope
+    
+###🔮 Future Scope
 Offline Mode: Convert the model to TensorFlow Lite for a mobile Android app.
 
 Local Language Support: Add Hindi/Regional language support for wider accessibility in rural India.
 
 Fertilizer Calculator: Add a tool to calculate NPK requirements based on crop stage.
 
-🤝 Contributing
+###🤝 Contributing
 Contributions are welcome! Please fork this repository and submit a Pull Request.
 
-📜 License
+###📜 License
 This project is licensed under the MIT License.
