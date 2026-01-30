@@ -32,12 +32,12 @@ The model was trained on a curated dataset combining the **Plant Village Dataset
 * **Optimization:** Uses `tf.data.AUTOTUNE` for high-performance data pipelines and data augmentation (rotation, zoom, contrast) to handle real-world field conditions.
 
 ## 📸 How It Works
-1.  **Select Crop:** User selects the crop type (Rice, Tomato, etc.) from the sidebar.
-2.  **Upload Image:** User uploads a photo of the affected leaf.
-3.  **AI Diagnosis:**
+1. **Select Crop:** User selects the crop type (Rice, Tomato, etc.) from the sidebar.
+2. **Upload Image:** User uploads a photo of the affected leaf.
+3. **AI Diagnosis:**
     * The **CNN Model** analyzes the texture/shape to find the disease (e.g., *Early Blight*).
     * The **Logic Filter** ensures the diagnosis matches the selected crop type.
-4.  **Prescription:** The **LLM (Groq)** receives the diagnosis and writes a custom treatment plan (Cause, Medicine, Prevention).
+4. **Prescription:** The **LLM (Groq)** receives the diagnosis and writes a custom treatment plan (Cause, Medicine, Prevention).
 
 ## ⚙️ Installation & Setup
 
@@ -48,15 +48,44 @@ The model was trained on a curated dataset combining the **Plant Village Dataset
 ### 1. Clone the Repository
 ```bash
 git clone [https://github.com/your-username/Agri-Doctor.git](https://github.com/your-username/Agri-Doctor.git)
+cd Agri-Doctor
 
-cd Agri-Doctor```bash
+###2. Install Dependencies
+Bash
+pip install -r requirements.txt
+3. Set Up API Key (Securely)
+Create a .streamlit folder and a secrets.toml file to store your key safely.
+
+Windows:
+
+Bash
+mkdir .streamlit
+notepad .streamlit/secrets.toml
+Inside secrets.toml, paste your key:
+
+Ini, TOML
+GROQ_API_KEY = "gsk_your_key_here"
+4. Run the App
+Bash
+python -m streamlit run app.py
 📂 Project Structure
 Plaintext
 Agri-Doctor/
 ├── MultiCrop_Doctor_v1.keras    # The trained AI Brain (CNN)
 ├── app.py                       # Main Streamlit Application
-├── requirements.txt
+├── requirements.txt             # List of dependencies
+├── README.md                    # Project Documentation
+└── .streamlit/                  # Hidden folder for secrets
+    └── secrets.toml             # API Key storage (Do not upload to GitHub)
+🔮 Future Scope
+Offline Mode: Convert the model to TensorFlow Lite for a mobile Android app.
 
+Local Language Support: Add Hindi/Regional language support for wider accessibility in rural India.
 
+Fertilizer Calculator: Add a tool to calculate NPK requirements based on crop stage.
 
+🤝 Contributing
+Contributions are welcome! Please fork this repository and submit a Pull Request.
 
+📜 License
+This project is licensed under the MIT License.
