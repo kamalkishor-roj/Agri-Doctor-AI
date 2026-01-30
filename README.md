@@ -49,13 +49,14 @@ The model was trained on a curated dataset combining the **Plant Village Dataset
 ```bash
 git clone [https://github.com/your-username/Agri-Doctor.git](https://github.com/your-username/Agri-Doctor.git)
 
-cd Agri-Doctor```
+cd Agri-Doctor```bash
 📂 Project Structure
 Plaintext
 Agri-Doctor/
 ├── MultiCrop_Doctor_v1.keras    # The trained AI Brain (CNN)
 ├── app.py                       # Main Streamlit Application
 ├── requirements.txt
+
 
 
 
