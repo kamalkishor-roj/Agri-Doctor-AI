@@ -124,7 +124,5 @@ Contributions are welcome! Please fork this repository and submit a Pull Request
 
 This project is licensed under the MIT License.
 
-```
 
-```
 
