@@ -10,83 +10,96 @@
 
 This project bridges the gap between complex technology and the farm field. By simply uploading a photo of a leaf, the system identifies the specific disease and—crucially—provides an instant, actionable prescription (chemical and organic) using a Large Language Model (LLM).
 
+---
+
 ## 🚀 Key Features
-* **Multi-Crop Support:** Specialized diagnosis for **Rice, Sugarcane, Tomato, and Grapes**.
-* **Hybrid AI Architecture:**
-    * **Vision:** A fine-tuned **MobileNetV2** (CNN) model to classify 23 distinct disease classes.
-    * **Language:** Integrated **Groq API (Llama-3-70b)** to generate human-readable medical advice, treatment steps, and prevention tips.
-* **Smart Logic Filter:** Implements a custom probability filter to eliminate confusion between visually similar crops (e.g., Rice vs. Sugarcane leaves).
-* **Interactive Chat:** Users can ask follow-up questions to the "AI Doctor" (e.g., *"Is this pesticide safe for pets?"*) and get context-aware answers.
+* **Multi-Crop Support:** Specialized diagnosis for **Rice, Sugarcane, Tomato, and Grapes**
+* **Hybrid AI Architecture**
+  * **Vision:** Fine-tuned **MobileNetV2 (CNN)** for classifying 23 disease classes
+  * **Language:** **Groq API (Llama-3-70B)** for human-readable diagnosis and treatment
+* **Smart Logic Filter:** Prevents crop misclassification (e.g., Rice vs. Sugarcane leaves)
+* **Interactive Chat:** Ask follow-up questions to the AI Doctor and receive contextual answers
+
+---
 
 ## 🛠️ Tech Stack
-* **Deep Learning:** TensorFlow, Keras (Transfer Learning with MobileNetV2).
-* **Generative AI:** Groq API (Llama 3.3 Versatile).
-* **Web Framework:** Streamlit (Python).
-* **Image Processing:** PIL (Python Imaging Library), NumPy.
+* **Deep Learning:** TensorFlow, Keras (Transfer Learning – MobileNetV2)
+* **Generative AI:** Groq API (Llama-3)
+* **Web Framework:** Streamlit
+* **Image Processing:** PIL, NumPy
+
+---
 
 ## 📊 Dataset & Model Results
-The model was trained on a curated dataset combining the **Plant Village Dataset** and custom web-scraped images for Rice and Sugarcane.
-* **Total Classes:** 23 (Including healthy and diseased states).
-* **Training Accuracy:** ~80% (after fine-tuning top layers).
-* **Validation Accuracy:** ~78%.
-* **Optimization:** Uses `tf.data.AUTOTUNE` for high-performance data pipelines and data augmentation (rotation, zoom, contrast) to handle real-world field conditions.
+* Combined **PlantVillage Dataset** + custom web-scraped images
+* **Total Classes:** 23 (Healthy + Diseased)
+* **Training Accuracy:** ~80%
+* **Validation Accuracy:** ~78%
+* **Optimizations:** Data augmentation, `tf.data.AUTOTUNE`, fine-tuned top layers
 
-## 📸 How It Works
-1. **Select Crop:** User selects the crop type (Rice, Tomato, etc.) from the sidebar.
-2. **Upload Image:** User uploads a photo of the affected leaf.
-3. **AI Diagnosis:**
-    * The **CNN Model** analyzes the texture/shape to find the disease (e.g., *Early Blight*).
-    * The **Logic Filter** ensures the diagnosis matches the selected crop type.
-4. **Prescription:** The **LLM (Groq)** receives the diagnosis and writes a custom treatment plan (Cause, Medicine, Prevention).
+---
+
+## 🧠 How It Works
+1. **Select Crop** – Choose the crop type from the sidebar
+2. **Upload Image** – Upload a photo of the affected leaf
+3. **AI Diagnosis**
+   * CNN predicts the disease
+   * Logic filter validates crop–disease consistency
+4. **Prescription**
+   * LLM generates cause, treatment, and prevention steps
+
+---
+
+## 📱 App Screenshots
+> Add your screenshots in a `screenshots/` folder
+
+### 1️⃣ Disease Diagnosis & Medical Prescription
+![Diagnosis Result](screenshots/diagnosis.png)
+
+### 2️⃣ AI Doctor Chat Interface
+![Chat Interface](screenshots/chat.png)
+
+---
 
 ## ⚙️ Installation & Setup
 
 ### Prerequisites
 * Python 3.8+
-* A free [Groq API Key](https://console.groq.com/keys)
+* Free **Groq API Key**
 
 ### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/Agri-Doctor.git
+cd Agri-Doctor```
 
-###2. Install Dependencies
-Bash
+2. Install Dependencies
 pip install -r requirements.txt
-
-###3. Set Up API Key (Securely)
-Create a .streamlit folder and a secrets.toml file to store your key safely.
-
-Windows:
-
-Bash
+3. Set Up API Key (Securely)
 mkdir .streamlit
 notepad .streamlit/secrets.toml
-Inside secrets.toml, paste your key:
+Inside secrets.toml:
 
-Ini, TOML
 GROQ_API_KEY = "gsk_your_key_here"
-
-###4. Run the App
-Bash
+4. Run the App
 python -m streamlit run app.py
-
-###📂 Project Structure
-Plaintext
+📂 Project Structure
 Agri-Doctor/
-├── MultiCrop_Doctor_v1.keras    # The trained AI Brain (CNN)
-├── app.py                       # Main Streamlit Application
-├── requirements.txt             # List of dependencies
-├── README.md                    # Project Documentation
-└── .streamlit/                  # Hidden folder for secrets
-    └── secrets.toml             # API Key storage (Do not upload to GitHub)
-    
-###🔮 Future Scope
-Offline Mode: Convert the model to TensorFlow Lite for a mobile Android app.
+├── MultiCrop_Doctor_v1.keras
+├── app.py
+├── requirements.txt
+├── README.md
+├── screenshots/
+│   ├── diagnosis.png
+│   └── chat.png
+└── .streamlit/
+    └── secrets.toml
+🔮 Future Scope
+📱 TensorFlow Lite Android App
 
-Local Language Support: Add Hindi/Regional language support for wider accessibility in rural India.
+🌐 Hindi & Regional Language Support
 
-Fertilizer Calculator: Add a tool to calculate NPK requirements based on crop stage.
+🧮 Fertilizer & NPK Calculator
 
-###🤝 Contributing
-Contributions are welcome! Please fork this repository and submit a Pull Request.
+🤝 Contributing
+Pull requests are welcome! Fork this repository and submit your improvements.
 
-###📜 License
-This project is licensed under the MIT License.
