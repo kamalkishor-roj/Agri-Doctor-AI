@@ -70,8 +70,8 @@ This project bridges the gap between complex technology and the farm field. By s
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/your-username/Agri-Doctor.git
-cd Agri-Doctor```
-
+cd Agri-Doctor
+---
 2. Install Dependencies
 pip install -r requirements.txt
 3. Set Up API Key (Securely)
@@ -102,4 +102,5 @@ Agri-Doctor/
 
 🤝 Contributing
 Pull requests are welcome! Fork this repository and submit your improvements.
+
 
