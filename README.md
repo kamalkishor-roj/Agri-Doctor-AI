@@ -40,7 +40,6 @@ The model was trained on a curated dataset combining the **Plant Village Dataset
 4. **Prescription:** The **LLM (Groq)** receives the diagnosis and writes a custom treatment plan (Cause, Medicine, Prevention).
 
 ## 📱 App Demo
-> *Note: Add your actual screenshots in a `screenshots/` folder.*
 
 **1. Disease Diagnosis & Medical Prescription**
 ![Diagnosis Result](screenshots/diagnosis.png)
@@ -123,6 +122,7 @@ Contributions are welcome! Please fork this repository and submit a Pull Request
 ## License
 
 This project is licensed under the MIT License.
+
 
 
 
