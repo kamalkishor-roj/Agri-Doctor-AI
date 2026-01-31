@@ -1,14 +1,3 @@
-This is an excellent idea. Adding screenshots is the best way to prove your project works before a recruiter even looks at the code.
-
-Here is the **Complete, Final `README.md**` with a new **"App Screenshots"** section added.
-
-**Action Required:**
-
-1. Create a new folder in your project named `screenshots`.
-2. Save your best images (like the diagnosis result and the chat window) into that folder.
-3. Name them `diagnosis.png`, `chat.png`, etc., to match the code below.
-
-```markdown
 # 🌿 Agri-Doctor: AI-Powered Crop Disease Detective
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
@@ -16,12 +5,12 @@ Here is the **Complete, Final `README.md**` with a new **"App Screenshots"** sec
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
 ![Groq](https://img.shields.io/badge/AI-Llama3-purple)
 
-## 📖 Overview
+## Overview
 **Agri-Doctor** is an end-to-end AI application designed to assist farmers in early detection and treatment of crop diseases. Agriculture is the backbone of many economies, yet farmers lose significant yields annually due to untreated or misdiagnosed plant diseases.
 
 This project bridges the gap between complex technology and the farm field. By simply uploading a photo of a leaf, the system identifies the specific disease and—crucially—provides an instant, actionable prescription (chemical and organic) using a Large Language Model (LLM).
 
-## 🚀 Key Features
+## Key Features
 * **Multi-Crop Support:** Specialized diagnosis for **Rice, Sugarcane, Tomato, and Grapes**.
 * **Hybrid AI Architecture:**
     * **Vision:** A fine-tuned **MobileNetV2** (CNN) model to classify 23 distinct disease classes.
@@ -42,7 +31,7 @@ The model was trained on a curated dataset combining the **Plant Village Dataset
 * **Validation Accuracy:** ~78%.
 * **Optimization:** Uses `tf.data.AUTOTUNE` for high-performance data pipelines and data augmentation (rotation, zoom, contrast) to handle real-world field conditions.
 
-## 📸 How It Works
+## How It Works
 1. **Select Crop:** User selects the crop type (Rice, Tomato, etc.) from the sidebar.
 2. **Upload Image:** User uploads a photo of the affected leaf.
 3. **AI Diagnosis:**
@@ -121,20 +110,21 @@ Agri-Doctor/
 
 ```
 
-## 🔮 Future Scope
+## Future Scope
 
 * **Offline Mode:** Convert the model to TensorFlow Lite for a mobile Android app.
 * **Local Language Support:** Add Hindi/Regional language support for wider accessibility in rural India.
 * **Fertilizer Calculator:** Add a tool to calculate NPK requirements based on crop stage.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please fork this repository and submit a Pull Request.
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License.
 
 ```
 
 ```
+
