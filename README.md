@@ -119,9 +119,8 @@ Agri-Doctor/
 
 Contributions are welcome! Please fork this repository and submit a Pull Request.
 
-## License
 
-This project is licensed under the MIT License.
+
 
 
 
